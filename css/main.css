@@ -1,3 +1,9 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: inherit; }
 
-body { box-sizing: border-box; }
+body { box-sizing: border-box; font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 500; background-color: #ecf2f8; }
+
+.container { width: 87%; max-width: 1440px; margin: 75px auto; }
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: #3e52a3; }

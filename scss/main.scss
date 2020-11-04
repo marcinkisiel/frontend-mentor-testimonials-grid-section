@@ -1,3 +1,22 @@
+// Variables
+
+//breakpoint
+$md: 768px;
+$xl: 1200px;
+
+// colors
+
+// moderate violet
+$violet: hsl(263, 55%, 52%);
+// very dark grayish blue
+$gray: hsl(217, 19%, 35%);
+// very dark blackish blue
+$black: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(0, 0%, 81%);
+// light grayish blue
+$gray-blue: hsl(210, 46%, 95%);
+
 *,
 *::before,
 *::after {
@@ -8,4 +27,22 @@
 
 body {
 	box-sizing: border-box;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	background-color: $gray-blue;
+}
+
+.container {
+	width: 87%;
+	max-width: 1440px;
+	margin: 75px auto;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
 }
