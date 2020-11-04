@@ -14,7 +14,9 @@ body { box-sizing: border-box; font-family: 'Barlow Semi Condensed', sans-serif;
 
 .testimonial__name, .testimonial__status { display: block; }
 
-.testimonial__title { margin-bottom: 20px; font-weight: 600; }
+.testimonial__quotation-icon { display: block; position: absolute; top: 0; right: 25px; }
+
+.testimonial__title { position: relative; margin-bottom: 20px; font-weight: 600; z-index: 1; }
 
 .testimonial__status, .testimonial__paragraph { color: #cfcfcf; }
 

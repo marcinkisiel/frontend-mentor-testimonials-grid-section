@@ -69,9 +69,18 @@ body {
 		display: block;
 	}
 
+	&__quotation-icon {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 25px;
+	}
+
 	&__title {
+		position: relative;
 		margin-bottom: 20px;
 		font-weight: 600;
+		z-index: 1;
 	}
 
 	&__status,
