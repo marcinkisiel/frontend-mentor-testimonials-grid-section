@@ -31,12 +31,76 @@ body {
 	font-size: 13px;
 	font-weight: 500;
 	background-color: $gray-blue;
+	color: $white;
 }
 
 .container {
-	width: 87%;
+	width: 86%;
 	max-width: 1440px;
 	margin: 75px auto;
+}
+
+.testimonial {
+	position: relative;
+	padding: 26px 30px 33px;
+	margin-bottom: 26px;
+	background-color: $violet;
+	border-radius: 5px;
+
+	&__author {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+	&__photo {
+		width: 30px;
+		height: 30px;
+		margin-right: 20px;
+		border-radius: 50%;
+		border: 2px solid lighten($violet, 20%);
+
+		&--borderless {
+			border: none;
+		}
+	}
+
+	&__name,
+	&__status {
+		display: block;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-weight: 600;
+	}
+
+	&__status,
+	&__paragraph {
+		color: $light-gray;
+	}
+
+	&__paragraph {
+		&--darker {
+			color: $gray;
+		}
+	}
+
+	&--violet {
+		background-color: $violet;
+	}
+
+	&--gray {
+		background-color: $gray;
+	}
+
+	&--white {
+		background-color: $white;
+		color: $black;
+	}
+
+	&--black {
+		background-color: $black;
+	}
 }
 
 .attribution {
