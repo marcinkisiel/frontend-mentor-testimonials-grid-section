@@ -2,9 +2,15 @@
 
 body { box-sizing: border-box; font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 500; background-color: #ecf2f8; color: white; }
 
-.container { width: 86%; max-width: 1440px; margin: 75px auto; }
+.container { width: 86%; max-width: 1110px; margin: 75px auto; }
 
-.testimonial { position: relative; padding: 26px 30px 33px; margin-bottom: 26px; background-color: #7541c8; border-radius: 5px; }
+@media (min-width: 992px) { .container { margin: 165px auto; } }
+
+@media (min-width: 992px) { .testimonials { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); grid-template-areas: 'violet violet gray white-2' 'white-1 black black white-2'; gap: 30px; } }
+
+.testimonial { position: relative; padding: 26px 28px 33px; margin-bottom: 26px; background-color: #7541c8; border-radius: 8px; box-shadow: 25px 25px 50px 10px rgba(25, 33, 46, 0.1); }
+
+@media (min-width: 992px) { .testimonial { padding: 26px 30px 33px; margin-bottom: 0; } }
 
 .testimonial__author { display: flex; margin-bottom: 20px; }
 
@@ -12,9 +18,11 @@ body { box-sizing: border-box; font-family: 'Barlow Semi Condensed', sans-serif;
 
 .testimonial__photo--borderless { border: none; }
 
-.testimonial__name, .testimonial__status { display: block; }
+.testimonial__name, .testimonial__status { display: block; position: relative; z-index: 1; }
 
 .testimonial__quotation-icon { display: block; position: absolute; top: 0; right: 25px; }
+
+@media (min-width: 992px) { .testimonial__quotation-icon { right: 90px; } }
 
 .testimonial__title { position: relative; margin-bottom: 20px; font-weight: 600; z-index: 1; }
 
@@ -22,14 +30,12 @@ body { box-sizing: border-box; font-family: 'Barlow Semi Condensed', sans-serif;
 
 .testimonial__paragraph--darker { color: #48556a; }
 
-.testimonial--violet { background-color: #7541c8; }
+.testimonial--violet { grid-area: violet; background-color: #7541c8; }
 
-.testimonial--gray { background-color: #48556a; }
+.testimonial--gray { grid-area: gray; background-color: #48556a; }
 
-.testimonial--white { background-color: white; color: #19212e; }
+.testimonial--white { grid-area: white-1; background-color: white; color: #19212e; }
 
-.testimonial--black { background-color: #19212e; }
+.testimonial--black { grid-area: black; background-color: #19212e; }
 
-.attribution { font-size: 11px; text-align: center; }
-
-.attribution a { color: #3e52a3; }
+.testimonial--white-2 { grid-area: white-2; }

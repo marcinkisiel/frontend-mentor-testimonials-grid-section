@@ -2,6 +2,7 @@
 
 //breakpoint
 $md: 768px;
+$lg: 992px;
 $xl: 1200px;
 
 // colors
@@ -36,16 +37,38 @@ body {
 
 .container {
 	width: 86%;
-	max-width: 1440px;
+	max-width: 1110px;
 	margin: 75px auto;
+
+	@media (min-width: $lg) {
+		margin: 165px auto;
+	}
+}
+
+.testimonials {
+	@media (min-width: $lg) {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-areas:
+			'violet violet gray white-2'
+			'white-1 black black white-2';
+		gap: 30px;
+	}
 }
 
 .testimonial {
 	position: relative;
-	padding: 26px 30px 33px;
+	padding: 26px 28px 33px;
 	margin-bottom: 26px;
 	background-color: $violet;
-	border-radius: 5px;
+	border-radius: 8px;
+	box-shadow: 25px 25px 50px 10px rgba($black, 0.1);
+
+	@media (min-width: $lg) {
+		padding: 26px 30px 33px;
+		margin-bottom: 0;
+	}
 
 	&__author {
 		display: flex;
@@ -67,6 +90,8 @@ body {
 	&__name,
 	&__status {
 		display: block;
+		position: relative;
+		z-index: 1;
 	}
 
 	&__quotation-icon {
@@ -74,6 +99,10 @@ body {
 		position: absolute;
 		top: 0;
 		right: 25px;
+
+		@media (min-width: $lg) {
+			right: 90px;
+		}
 	}
 
 	&__title {
@@ -95,27 +124,27 @@ body {
 	}
 
 	&--violet {
+		grid-area: violet;
 		background-color: $violet;
 	}
 
 	&--gray {
+		grid-area: gray;
 		background-color: $gray;
 	}
 
 	&--white {
+		grid-area: white-1;
 		background-color: $white;
 		color: $black;
 	}
 
 	&--black {
+		grid-area: black;
 		background-color: $black;
 	}
-}
 
-.attribution {
-	font-size: 11px;
-	text-align: center;
-}
-.attribution a {
-	color: hsl(228, 45%, 44%);
+	&--white-2 {
+		grid-area: white-2;
+	}
 }
